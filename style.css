@@ -1,0 +1,831 @@
+/* ==========================================================
+   SITE DE MARIAGE
+   Marlène & Frédéric
+
+   Fichier : style.css
+
+   Partie 1
+   ========================================================== */
+
+
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    font-family:'Montserrat',sans-serif;
+
+    color:#404040;
+
+    background:#f7f6f2;
+
+    line-height:1.8;
+
+    overflow-x:hidden;
+
+}
+
+
+img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+ul{
+
+    list-style:none;
+
+}
+
+
+/* ==========================================================
+   CONTENEUR
+   ========================================================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+/* ==========================================================
+   COULEURS
+   ========================================================== */
+
+:root{
+
+    --green:#5d7355;
+
+    --green-dark:#4c6246;
+
+    --gold:#cbb488;
+
+    --cream:#f7f6f2;
+
+    --white:#ffffff;
+
+    --text:#404040;
+
+}
+
+
+/* ==========================================================
+   BARRE SUPERIEURE
+   ========================================================== */
+
+.topbar{
+
+    background:var(--green);
+
+    color:white;
+
+    text-align:center;
+
+    padding:12px;
+
+    font-size:.9rem;
+
+    letter-spacing:.5px;
+
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+#hero{
+
+    position:relative;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+
+.hero-image{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    z-index:1;
+
+}
+
+
+/* ==========================================================
+   MENU
+   ========================================================== */
+
+nav{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:30px 80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    z-index:10;
+
+}
+
+
+.logo{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:2.4rem;
+
+    color:white;
+
+}
+
+
+.logo span{
+
+    color:var(--gold);
+
+}
+
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+
+nav a{
+
+    color:white;
+
+    text-transform:uppercase;
+
+    font-size:.9rem;
+
+    letter-spacing:1px;
+
+    position:relative;
+
+}
+
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--gold);
+
+    transition:.3s;
+
+}
+
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+
+/* ==========================================================
+   CONTENU HERO
+   ========================================================== */
+
+.hero-content{
+
+    position:absolute;
+
+    top:30%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    color:white;
+
+    z-index:5;
+
+    width:90%;
+
+}
+
+
+.subtitle{
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    font-size:.9rem;
+
+}
+
+
+.hero-content h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:6rem;
+
+    font-weight:400;
+
+    margin:20px 0;
+
+}
+
+
+.hero-content h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    font-weight:500;
+
+    margin-bottom:15px;
+
+}
+
+
+.hero-content h3{
+
+    font-size:1rem;
+
+    letter-spacing:3px;
+
+    font-weight:400;
+
+}
+
+
+/* ==========================================================
+   LIGNE DOREE
+   ========================================================== */
+
+.gold-line{
+
+    width:90px;
+
+    height:2px;
+
+    background:var(--gold);
+
+    margin:30px auto;
+
+}
+
+
+/* ==========================================================
+   BOUTON
+   ========================================================== */
+
+.button{
+
+    margin:60px auto 0;
+
+    width:220px;
+
+    height:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    border-radius:40px;
+
+    background:var(--green);
+
+    color:white;
+
+    transition:.35s;
+
+}
+
+
+.button:hover{
+
+    background:var(--green-dark);
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+
+section{
+
+    padding:100px 0;
+
+}
+
+section h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    font-weight:600;
+
+    text-align:center;
+
+    color:var(--green);
+
+    margin-bottom:20px;
+
+}
+
+section p{
+
+    max-width:750px;
+
+    margin:20px auto;
+
+    text-align:center;
+
+    color:#666;
+
+}
+
+
+/* ==========================================================
+   ORNEMENT
+   ========================================================== */
+
+.ornement{
+
+    text-align:center;
+
+    font-size:2rem;
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+}
+
+
+/* ==========================================================
+   COMPTE A REBOURS
+   ========================================================== */
+
+#countdown{
+
+    background:var(--green);
+
+    color:white;
+
+}
+
+#countdown h2{
+
+    color:white;
+
+}
+
+.countdown{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    max-width:1100px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.item{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(8px);
+
+    border-radius:20px;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.item:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.item span{
+
+    display:block;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:4rem;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+}
+
+.item small{
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+/* ==========================================================
+   CARTES
+   ========================================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:45px 35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card i{
+
+    font-size:2.6rem;
+
+    color:var(--green);
+
+    margin-bottom:25px;
+
+}
+
+.card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    color:var(--green);
+
+    margin-bottom:20px;
+
+}
+
+.card p{
+
+    margin:0;
+
+}
+
+
+/* ==========================================================
+   LISTE
+   ========================================================== */
+
+.future-list{
+
+    width:500px;
+
+    max-width:100%;
+
+    margin:50px auto 0;
+
+}
+
+.future-list li{
+
+    padding:18px 0;
+
+    border-bottom:1px solid #e5e5e5;
+
+    text-align:center;
+
+    color:#666;
+
+}
+
+.future-list li:last-child{
+
+    border-bottom:none;
+
+}
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+footer{
+
+    background:var(--green);
+
+    color:white;
+
+    text-align:center;
+
+    padding:90px 20px 60px;
+
+}
+
+footer h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:4rem;
+
+    font-weight:400;
+
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    margin:10px 0;
+
+    color:rgba(255,255,255,.85);
+
+}
+
+.footer-bottom{
+
+    margin-top:40px;
+
+    padding-top:25px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    font-size:.9rem;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media(max-width:992px){
+
+    nav{
+
+        padding:25px;
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:4.5rem;
+
+    }
+
+    .countdown{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    nav ul{
+
+        display:none;
+
+    }
+
+    .hero-content h1{
+
+        font-size:3.2rem;
+
+    }
+
+    .hero-content h2{
+
+        font-size:1.4rem;
+
+    }
+
+    .subtitle{
+
+        font-size:.75rem;
+
+        letter-spacing:3px;
+
+    }
+
+    .countdown{
+
+        grid-template-columns:1fr;
+
+    }
+
+    section{
+
+        padding:70px 0;
+
+    }
+
+    section h2{
+
+        font-size:2.3rem;
+
+    }
+
+    footer h2{
+
+        font-size:3rem;
+
+    }
+
+}
+
+/* ==========================================================
+   ANIMATION DES SECTIONS
+   ========================================================== */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all .8s ease;
+
+}
+
+.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* ==========================================================
+   MENU AU SCROLL
+   ========================================================== */
+
+.nav-scroll{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.10);
+
+}
+
+.nav-scroll a{
+
+    color:#404040;
+
+}
+
+.nav-scroll .logo{
+
+    color:#5d7355;
+
+}
